@@ -15,7 +15,7 @@ void input(Point *a, Point *b)
   scanf("%f%f",&b->x, &b->y);
 }
 
-float find_distance(Point a, Point b, float *distance)
+void find_distance(Point a, Point b, float *distance)
 {
   *distance = sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
 }
