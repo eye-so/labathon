@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-#include <stdio.h>
-
 struct circle {
   float radius,area;
 };
