@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#include <stdio.h>
+
 struct circle {
   float radius,area;
 };
@@ -46,7 +48,7 @@ float find_sum_of_areas_of_n_circles(int n, Circle cs[n] )
 
 void display_circle(int circle_no, Circle c)
 {
-  printf("Radius of circle %d = %f\n", (circle_no+1), c.radius);
+  printf("Area of circle %d = %f\n", (circle_no+1), c.area);
 }
 
 void display_result (int n, Circle cs[n], float area)
