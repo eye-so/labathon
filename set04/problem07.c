@@ -29,10 +29,12 @@ int find_gcd(int a, int b)
 
 Fraction add_fractions(Fraction f1, Fraction f2)
 {
-  int gcd = find_gcd(f1.den, f2.den);
   Fraction result;
-  result.num = (f1.num * f2.den + f2.num * f1.den) / gcd;
-  result.den = gcd;
+  result.num = f1.num * f2.den + f2.num * f1.den;
+  result.den = f1.den * f2.den;
+  int gcd = find_gcd(result.num, result.den);
+  result.num /= gcd;
+  result.den /= gcd;
   return result;
 }
 
@@ -47,5 +49,5 @@ int main()
   f1 = input_fraction();
   f2 = input_fraction();
   sum = add_fractions(f1, f2);
-  output();
+  output(f1, f2, sum);
 }
