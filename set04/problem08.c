@@ -25,7 +25,7 @@ Fraction input_fraction()
 void input_n_fractions(int n, Fraction f[n])
 {
   for(int i = 0; i < n; i++){
-    f[i] = input();
+    f[i] = input_fraction();
   }
 }
 
@@ -57,7 +57,7 @@ Fraction add_n_fractions(int n, Fraction f[n])
 {
   Fraction sum = f[0];
   for(int i = 1; i < n; i++){
-    sum = add_fraction(sum, f[i]);
+    sum = add_fractions(sum, f[i]);
   }
   return sum;
 }
@@ -72,9 +72,9 @@ void output(int n, Fraction f[n], Fraction sum)
 
 int main()
 {
-  Fraction f[n], sum;
   int n = input_n();
-  input_n_fractions(n, f[n]);
-  sum = add_n_fractions(n, f[n]);
-  output(n, f[n], sum);
+  Fraction f[n], sum;
+  input_n_fractions(n, f);
+  sum = add_n_fractions(n, f);
+  output(n, f, sum);
 }
