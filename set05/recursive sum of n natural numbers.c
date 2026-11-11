@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int input(int *n)
+void input(int *n)
 {
   printf("Enter n: ");
   scanf("%d", n);
